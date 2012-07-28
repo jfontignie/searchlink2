@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_org_searchlink_domain_Correlation" modelAttribute="correlation" path="/correlations" render="${empty dependencies}" z="riARREulpFxe10ngdJXyX1qVhXo=">
+        <field:select field="x" id="c_org_searchlink_domain_Correlation_x" itemValue="id" items="${keywords}" path="/keywords" z="E4mq6FVRY50GLMwuGiPOkctMAfM="/>
+        <field:select field="y" id="c_org_searchlink_domain_Correlation_y" itemValue="id" items="${keywords}" path="/keywords" z="QXEpK99XeR+js4+NLy2a060U7/o="/>
+        <field:input field="sumXY" id="c_org_searchlink_domain_Correlation_sumXY" z="MijTgQgGKCUF59MDKvs3lnk14EM="/>
+        <field:input field="count" id="c_org_searchlink_domain_Correlation_count" z="0Y7PTyH0q64OoMXY9nQbBuIYjrY="/>
+        <field:input field="similarity" id="c_org_searchlink_domain_Correlation_similarity" validationMessageCode="field_invalid_number" z="Ggccxeh/V68LMAcz2Kl9fwBnQGU="/>
+        <field:input field="covariance" id="c_org_searchlink_domain_Correlation_covariance" validationMessageCode="field_invalid_number" z="vXnpjZcl8q+fzocT/kZ2uGrznLs="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_org_searchlink_domain_Correlation" render="${not empty dependencies}" z="9xZ/6BZB5ELRMnsCWvSvaNrq+og="/>
+</div>

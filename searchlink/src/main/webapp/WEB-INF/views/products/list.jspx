@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_searchlink_domain_Product" items="${products}" z="lLr2OlhvFgwxF5GRUkZIWt9UAIQ=">
+        <table:table data="${products}" id="l_org_searchlink_domain_Product" path="/products" z="W/2BVw/xTKHu2Ls/MX0cjPdjiig=">
+            <table:column date="true" dateTimePattern="${product_datecreated_date_format}" id="c_org_searchlink_domain_Product_dateCreated" property="dateCreated" z="flni815RPVmCWtPPRaOXqoiEerc="/>
+            <table:column id="c_org_searchlink_domain_Product_identifier" property="identifier" z="F5L7bu59jP9T1/ycOXwsrqlPhT8="/>
+            <table:column id="c_org_searchlink_domain_Product_name" property="name" z="YerpoyDJWoH2XMUnqkH0Yr1QMpI="/>
+            <table:column id="c_org_searchlink_domain_Product_state" property="state" z="2xp8erC5zhvoYx43cDEsc8IzMOg="/>
+            <table:column id="c_org_searchlink_domain_Product_authors" property="authors" z="vW7UaeQKE70qlVlgtGoqMKCDd1E="/>
+            <table:column id="c_org_searchlink_domain_Product_inboundLinks" property="inboundLinks" z="6045mneeZk7YQF9AgOuVwmp9c68="/>
+        </table:table>
+    </page:list>
+</div>

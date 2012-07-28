@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_org_searchlink_domain_Correlation" items="${correlations}" z="hUP04VeKd5ZYjl0VPYGa6dv3AEg=">
+        <table:table data="${correlations}" id="l_org_searchlink_domain_Correlation" path="/links" z="8v0MtSM/aHEYdiXOVuSb+CZYsaY=">
+            <table:column id="c_org_searchlink_domain_Correlation_x" property="x" z="A3yqPBI4meJyYS+Vzj51ABADwAk="/>
+            <table:column id="c_org_searchlink_domain_Correlation_y" property="y" z="ogBe0NT1IzMc9018BK4fibCJuI8="/>
+            <table:column id="c_org_searchlink_domain_Correlation_sumXY" property="sumXY" z="/SUbaICAnpfCS1XGMnHGiMKq2dI="/>
+            <table:column id="c_org_searchlink_domain_Correlation_count" property="count" z="zE5f0UJYr4QIUQeUF4SYXlRILzA="/>
+            <table:column id="c_org_searchlink_domain_Correlation_similarity" property="similarity" z="NAVbbOkfinX29GL6Ojp8VR/GYRA="/>
+            <table:column id="c_org_searchlink_domain_Correlation_covariance" property="covariance" z="DtDJtbT14vYS+hNmvf3dxYcZJvI="/>
+        </table:table>
+    </page:list>
+</div>

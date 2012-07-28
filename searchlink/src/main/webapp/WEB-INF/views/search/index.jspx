@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page"
+     xmlns:spring="http://www.springframework.org/tags"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0" xmlns:c="http://java.sun.com/jsp/jstl/core"
+        >
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label__search_index" htmlEscape="false" var="title"/>
+    <util:panel id="title" title="${title}">
+        <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+
+        <h3>
+            <spring:message arguments="${app_name}" code="welcome_titlepane"/>
+        </h3>
+
+        <script type="text/javascript">
+            dojo.require("dijit.form.TextBox");
+        </script>
+
+        <form dojoType="dijit.form.Form">
+            <input label="search" type="text" name="search" value=""
+                   data-dojo-type="dijit.form.TextBox"
+                   data-dojo-props="trim:true" id="search"/>
+            <button dojoType="dijit.form.Button" type="submit">
+                Search
+            </button>
+        </form>
+
+        <c:if test="${not empty original}">
+            <table>
+                <tr>
+                    <td class="original">Original</td>
+                </tr>
+                    <tr>
+                        <td class="product">
+                            <div class="productName">${original.name}</div>
+                            <div class="productContent">${fn:substring(fn:escapeXml(original.content),0,300)}...</div>
+                            <div class="productLink">
+                                <div class="graph"><a href="search?graph=${original.id}">graph</a></div>
+                                <div class="amazon"><a
+                                        href="http://www.amazon.com/gp/product/${original.identifier}">amazon</a></div>
+                            </div>
+                        </td>
+                    </tr>
+
+            </table>
+        </c:if>
+
+
+        <c:if test="${not empty products}">
+
+
+            <table>
+                <c:forEach items="${products}" var="item">
+                    <tr>
+                        <td class="product">
+                            <div class="productName">${item.name}</div>
+                            <div class="productContent">${fn:substring(fn:escapeXml(item.content),0,300)}...</div>
+                            <div class="productLink">
+                                <div class="graph"><a href="search?graph=${item.id}">graph</a></div>
+                                <div class="similar"><a href="search?product=${item.id}">similars</a></div>
+                                <div class="amazon"><a
+                                        href="http://www.amazon.com/gp/product/${item.identifier}">amazon</a></div>
+                            </div>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </c:if>
+        <c:if test="${not empty links}">
+            <table>
+                <c:forEach items="${links}" var="item">
+                    <tr>
+                        <td class="product">
+                            <div class="productName">${item.target.name}</div>
+                            <div class="score">${item.score}</div>
+                            <div class="productContent">${fn:substring(fn:escapeXml(item.target.content),0,300)}...</div>
+                            <div class="productLink">
+                                <div class="graph"><a href="search?graph=${item.target.id}">graph</a></div>
+                                <div class="similar"><a href="search?product=${item.target.id}">similars</a></div>
+                                <div class="amazon"><a
+                                        href="http://www.amazon.com/gp/product/${item.target.identifier}">amazon</a>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </c:forEach>
+            </table>
+        </c:if>
+        <c:if test="${graph}">
+
+            <script type="text/javascript">
+                dojo.require("dijit.form.TextBox");
+                loadScript("/resources/scripts/jit.js", function () {
+                    loadScript("/resources/scripts/network.js", function () {
+                        var queryParams = dojo.queryToObject(window.location.search.slice(1));
+                        initRGraph(queryParams["graph"]);
+                    });
+                });
+            </script>
+
+            <div id="container">
+                <div id="center-container">
+                    <div id="log">
+                        <div align="center">Loading...</div>
+                    </div>
+                    <div id="infovis"></div>
+                </div>
+
+                <div id="right-container">
+                    <div id="inner-details"></div>
+                </div>
+            </div>
+        </c:if>
+
+
+    </util:panel>
+</div>

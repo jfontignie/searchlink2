@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_org_searchlink_domain_Correlation" modelAttribute="correlation" path="/correlations" versionField="Version" z="KAYX9F4RmZw6lA3QvCN47ljkYHk=">
+        <field:select field="x" id="c_org_searchlink_domain_Correlation_x" itemValue="id" items="${keywords}" path="/keywords" z="E4mq6FVRY50GLMwuGiPOkctMAfM="/>
+        <field:select field="y" id="c_org_searchlink_domain_Correlation_y" itemValue="id" items="${keywords}" path="/keywords" z="QXEpK99XeR+js4+NLy2a060U7/o="/>
+        <field:input field="sumXY" id="c_org_searchlink_domain_Correlation_sumXY" z="MijTgQgGKCUF59MDKvs3lnk14EM="/>
+        <field:input field="count" id="c_org_searchlink_domain_Correlation_count" z="0Y7PTyH0q64OoMXY9nQbBuIYjrY="/>
+        <field:input field="similarity" id="c_org_searchlink_domain_Correlation_similarity" validationMessageCode="field_invalid_number" z="Ggccxeh/V68LMAcz2Kl9fwBnQGU="/>
+        <field:input field="covariance" id="c_org_searchlink_domain_Correlation_covariance" validationMessageCode="field_invalid_number" z="vXnpjZcl8q+fzocT/kZ2uGrznLs="/>
+    </form:update>
+</div>

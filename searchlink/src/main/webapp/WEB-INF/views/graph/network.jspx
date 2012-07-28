@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label_graph_index" htmlEscape="false" var="title"/>
+    <util:panel id="title" title="${title}">
+        <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+
+
+        <!-- JIT Library File -->
+
+        <spring:url var="first" value="/resources/scripts/first.js"/>
+        <spring:url var="excanvas" value="/resources/scripts/excanvas.js"/>
+        <spring:url var="jit" value="/resources/scripts/jit.js"/>
+        <spring:url var="network" value="/resources/scripts/network.js"/>
+
+        <script type="text/javascript">
+            dojo.require("dijit.form.TextBox");
+            loadScript("/resources/scripts/jit.js", function () {
+                loadScript("/resources/scripts/network.js", function () {
+
+                    var queryParams = window.location.pathname.slice(-1);
+                    initRGraph(queryParams[0]);
+                });
+            });
+
+            dojo.ready(function () {
+                        var box = dijit.byId('search');
+
+                        var eventPress = function (event) {
+                            alert("I am here");
+
+                            switch (event.keyCode) {
+                                case dojo.keys.ENTER: //Process the Enter key event
+                                    alert("User input was " + box0.get('value'));
+                                    break;
+                                default:
+                                    //no defaults at this time
+                                    break;
+                            }
+                            dojo.stopEvent(event);
+
+                        }
+
+                        dojo.connect(box, 'onKeyUp', eventPress);
+                    }
+            )
+
+
+        </script>
+
+        <style type="text/css">
+            #container {
+                width: 100%;
+                /*width: 600px;*/
+                height: 1000px;
+                margin: 0 auto;
+                position: relative;
+            }
+
+            #right-container,
+            #center-container {
+
+                position: absolute;
+
+            }
+
+            #right-container {
+                top: 600px;
+                left: 0;
+                width: 100%;
+                height: 400px;
+                color: #686c70;
+                text-align: left;
+                overflow: auto;
+                background-color: #fff;
+                background-repeat: no-repeat;
+                border-bottom: 1px solid #ddd;
+                /*right:0;*/
+                /*background-image:url('col1.png');*/
+                background-position: center left;
+                border-right: 1px solid #ddd;
+            }
+
+            #right-container h4 {
+                text-indent: 8px;
+            }
+
+            #center-container {
+                height: 600px;
+                width: 100%;
+                background-color: #1a1a1a;
+                color: #ccc;
+            }
+
+            #log {
+                top: 0;
+                left: 0;
+                position: absolute;
+                width: 100%;
+                /*width: 600px;*/
+                height: 200px;
+                color: #23A4FF;
+            }
+
+            #infovis {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            .tip {
+                color: #111;
+                width: 139px;
+                background-color: white;
+                border: 1px solid #ccc;
+                -moz-box-shadow: #555 2px 2px 8px;
+                -webkit-box-shadow: #555 2px 2px 8px;
+                -o-box-shadow: #555 2px 2px 8px;
+                box-shadow: #555 2px 2px 8px;
+                opacity: 0.9;
+                filter: alpha(opacity = 90);
+                font-size: 10px;
+                font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+                padding: 7px;
+            }
+
+        </style>
+
+        <h1>Graph diagram</h1>
+
+
+        <label for="search">Search: </label>
+        <input type="text" name="search" value=""
+               data-dojo-type="dijit.form.TextBox"
+               data-dojo-props="trim:true, propercase:true" id="search"/>
+
+
+        <div id="container">
+
+            <div id="center-container">
+                <div id="log">
+                    <div align="center">Loading...</div>
+                </div>
+                <div id="infovis"></div>
+            </div>
+
+            <div id="right-container">
+                <div id="inner-details"></div>
+            </div>
+
+
+        </div>
+
+    </util:panel>
+</div>
+

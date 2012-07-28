@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags"
+     xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <spring:message code="label__search_index" htmlEscape="false" var="title"/>
+    <util:panel id="title" title="${title}">
+        <spring:message code="application_name" htmlEscape="false" var="app_name"/>
+
+        <h3>
+            <spring:message arguments="${app_name}" code="welcome_titlepane"/>     List of products
+        </h3>
+
+        <script type="text/javascript">
+            dojo.require("dijit.form.TextBox");
+        </script>
+
+        <form dojoType="dijit.form.Form">
+            <input label="search" type="text" name="search" value=""
+                   data-dojo-type="dijit.form.TextBox"
+                   data-dojo-props="trim:true" id="search"/>
+            <button dojoType="dijit.form.Button" type="submit">
+                Search
+            </button>
+        </form>
+    </util:panel>
+</div>

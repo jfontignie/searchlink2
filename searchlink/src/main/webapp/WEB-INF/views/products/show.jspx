@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_searchlink_domain_Product" object="${product}" path="/products" z="GpoHqXyp8l9Gge9h9DDh+HbSvCc=">
+        <field:display date="true" dateTimePattern="${product_datecreated_date_format}" field="dateCreated" id="s_org_searchlink_domain_Product_dateCreated" object="${product}" z="WsWikAbOWQ6eaP18rQKb5xiXtrA="/>
+        <field:display field="identifier" id="s_org_searchlink_domain_Product_identifier" object="${product}" z="B61jgumzrB/FpVLs+3YRr2xoEyo="/>
+        <field:display field="name" id="s_org_searchlink_domain_Product_name" object="${product}" z="90C0e8UXklIU5Ay//qkh4TwHea8="/>
+        <field:display field="state" id="s_org_searchlink_domain_Product_state" object="${product}" z="7zzNyHWShlTBvqTSNzK6xAS01ao="/>
+        <field:display field="authors" id="s_org_searchlink_domain_Product_authors" object="${product}" z="yyiGou2g+f2sVNJYzchKZP6Dodo="/>
+        <field:display field="content" id="s_org_searchlink_domain_Product_content" object="${product}" z="XXfdNDh/xODAYVAy842yyUzrIC0="/>
+        <field:display field="inboundLinks" id="s_org_searchlink_domain_Product_inboundLinks" object="${product}" z="q1yBDNB9/MilOTF2aWlQIff4fJw="/>
+    </page:show>
+</div>

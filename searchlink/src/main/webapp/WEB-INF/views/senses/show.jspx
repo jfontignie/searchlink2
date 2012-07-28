@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_searchlink_domain_Sense" object="${sense}" path="/senses" z="etE7TIWJ31GMICxRmkOh6ZRLjKU=">
+        <field:display field="word" id="s_org_searchlink_domain_Sense_word" object="${sense}" z="nf6hwKHh2CuZGvSLSc5UpcLBhXE="/>
+        <field:display field="sense" id="s_org_searchlink_domain_Sense_sense" object="${sense}" z="cnmKzFpaa8rXfV+0VJjxfO7zYFo="/>
+    </page:show>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_searchlink_domain_Link" object="${link}" path="/links" z="Dvm7+ebnYPb5hlvInJJPKmGzLm0=">
+        <field:display field="source" id="s_org_searchlink_domain_Link_source" object="${link}" z="lG3mTzBFPAJ+WydpXYl8yuKIvuY="/>
+        <field:display field="target" id="s_org_searchlink_domain_Link_target" object="${link}" z="zLeWCD96Mg0cdQ6IMemgA6rRz4Y="/>
+        <field:display field="type" id="s_org_searchlink_domain_Link_type" object="${link}" z="+DFgxBIfArwBJSDPtNJ8o1NB/aQ="/>
+        <field:display field="score" id="s_org_searchlink_domain_Link_score" object="${link}" z="gH1OoaIiyU/sy/703yMx86fBs8I="/>
+    </page:show>
+</div>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_org_searchlink_domain_Correlation" object="${correlation}" path="/correlations" z="Yda+2Drr/tO0UwQOgzzDpNWNoug=">
+        <field:display field="x" id="s_org_searchlink_domain_Correlation_x" object="${correlation}" z="oVhFYc/pxmBmvCptuz4nVV32PRI="/>
+        <field:display field="y" id="s_org_searchlink_domain_Correlation_y" object="${correlation}" z="OEgovpNGczfC41XeU5YRY53c3m0="/>
+        <field:display field="sumXY" id="s_org_searchlink_domain_Correlation_sumXY" object="${correlation}" z="E0kZsLJ2CUfycldGrm0twGu4UPE="/>
+        <field:display field="count" id="s_org_searchlink_domain_Correlation_count" object="${correlation}" z="I+Yw0buMW+QUJ9dB1G4zySk69ow="/>
+        <field:display field="similarity" id="s_org_searchlink_domain_Correlation_similarity" object="${correlation}" z="JYjEmPnJZ5c48saNQfJK0YDGJAw="/>
+        <field:display field="covariance" id="s_org_searchlink_domain_Correlation_covariance" object="${correlation}" z="ob8aJB869UGKPOA9O4awRilE0YE="/>
+    </page:show>
+</div>
